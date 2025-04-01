@@ -1,0 +1,198 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for Failed to commit area from 0x0000000080e00000 to 0x0000000088e00000 of length 134217728.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3388), pid=3136, tid=900
+#
+# JRE version:  (11.0.26+4) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.26+4, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --module-path=D:\Project java\porabola\target\classes;C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13-win.jar;C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar -Djdk.module.main=com.example com.example/com.example.PerfectCoordinateSystem
+
+Host: Intel(R) Core(TM) i5-2540M CPU @ 2.60GHz, 4 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.5438)
+Time: Tue Apr  1 11:06:34 2025 RTZ 2 (s 10 , 64 bit Build 19041 (10.0.19041.5438) elapsed time: 0.055293 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001daa64d3000):  JavaThread "Unknown thread" [_thread_in_vm, id=900, stack(0x0000007c3b500000,0x0000007c3b600000)]
+
+Stack: [0x0000007c3b500000,0x0000007c3b600000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x64485a]
+V  [jvm.dll+0x7d7099]
+V  [jvm.dll+0x7d8779]
+V  [jvm.dll+0x7d8e73]
+V  [jvm.dll+0x269095]
+V  [jvm.dll+0x641a89]
+V  [jvm.dll+0x636325]
+V  [jvm.dll+0x32552d]
+V  [jvm.dll+0x325392]
+V  [jvm.dll+0x329fb6]
+V  [jvm.dll+0x370fb0]
+V  [jvm.dll+0x370a22]
+V  [jvm.dll+0x300458]
+V  [jvm.dll+0x301555]
+V  [jvm.dll+0x7b05c7]
+V  [jvm.dll+0x7b1d4f]
+V  [jvm.dll+0x37e2a9]
+V  [jvm.dll+0x7921ef]
+V  [jvm.dll+0x3eeb67]
+V  [jvm.dll+0x3f1061]
+C  [jli.dll+0x52c0]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17374]
+C  [ntdll.dll+0x4cc91]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001daa4325840, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001daa64ed000 GCTaskThread "GC Thread#0" [stack: 0x0000007c3b600000,0x0000007c3b700000] [id=3676]
+  0x000001daa651c000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000007c3b700000,0x0000007c3b800000] [id=10400]
+  0x000001daa6520800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000007c3b800000,0x0000007c3b900000] [id=224]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fffda8412b7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001daa64cefa0] Heap_lock - owner thread: 0x000001daa64d3000
+
+Heap address: 0x0000000080e00000, size: 2034 MB, Compressed Oops mode: Non-zero based: 0x0000000080e00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.013 Loaded shared library C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff7f8d00000 - 0x00007ff7f8d0e000 	C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\java.exe
+0x00007ff823f70000 - 0x00007ff824168000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff823780000 - 0x00007ff823842000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff8219e0000 - 0x00007ff821cdf000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff8218e0000 - 0x00007ff8219e0000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff810290000 - 0x00007ff8102a7000 	C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\jli.dll
+0x00007ff810270000 - 0x00007ff81028e000 	C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\VCRUNTIME140.dll
+0x00007ff822dc0000 - 0x00007ff822f5d000 	C:\Windows\System32\USER32.dll
+0x00007ff821760000 - 0x00007ff821782000 	C:\Windows\System32\win32u.dll
+0x00007ff811820000 - 0x00007ff811aba000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16\COMCTL32.dll
+0x00007ff8236e0000 - 0x00007ff82370b000 	C:\Windows\System32\GDI32.dll
+0x00007ff823510000 - 0x00007ff8235ae000 	C:\Windows\System32\msvcrt.dll
+0x00007ff821640000 - 0x00007ff82175a000 	C:\Windows\System32\gdi32full.dll
+0x00007ff821ce0000 - 0x00007ff821d7d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff8220d0000 - 0x00007ff8220ff000 	C:\Windows\System32\IMM32.DLL
+0x00007ff81ea80000 - 0x00007ff81ea8c000 	C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\vcruntime140_1.dll
+0x00007ff810180000 - 0x00007ff81020d000 	C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\msvcp140.dll
+0x00007fffda530000 - 0x00007fffdb0f3000 	C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\server\jvm.dll
+0x00007ff822210000 - 0x00007ff8222bf000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff822010000 - 0x00007ff8220af000 	C:\Windows\System32\sechost.dll
+0x00007ff823c10000 - 0x00007ff823d33000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff821610000 - 0x00007ff821637000 	C:\Windows\System32\bcrypt.dll
+0x00007ff823710000 - 0x00007ff82377b000 	C:\Windows\System32\WS2_32.dll
+0x00007ff823d40000 - 0x00007ff823d48000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff8150f0000 - 0x00007ff8150fa000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff80e9d0000 - 0x00007ff80e9f7000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff81f490000 - 0x00007ff81f4a2000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff81ea10000 - 0x00007ff81ea20000 	C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\verify.dll
+0x00007ff80ebb0000 - 0x00007ff80ed94000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff80eb70000 - 0x00007ff80eba4000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff821850000 - 0x00007ff8218d2000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff810150000 - 0x00007ff810178000 	C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\java.dll
+0x00007ff81c390000 - 0x00007ff81c39a000 	C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\jimage.dll
+0x00007ff810130000 - 0x00007ff810148000 	C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16;C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\java\11\bin\server
+
+VM Arguments:
+jvm_args: --module-path=D:\Project java\porabola\target\classes;C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13-win.jar;C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13-win.jar;C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13-win.jar;C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13-win.jar -Djdk.module.main=com.example 
+java_command: com.example/com.example.PerfectCoordinateSystem
+java_class_path (initial): C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-controls\13\javafx-controls-13.jar;C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-graphics\13\javafx-graphics-13.jar;C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-base\13\javafx-base-13.jar;C:\Users\tahgancrazy\.m2\repository\org\openjfx\javafx-fxml\13\javafx-fxml-13.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2132803584                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830732                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122913754                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122913754                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Users\tahgancrazy\.jdks\azul-21.0.6
+PATH=C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\gradle\latest\bin;C:\Users\tahgancrazy\AppData\Roaming\Code\User\globalStorage\pleiades.java-extension-pack-jdk\maven\latest\bin;C:\Users\tahgancrazy\.jdks\azul-21.0.6\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.13.11-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Git\cmd;C:\Users\tahgancrazy\AppData\Local\Microsoft\WindowsApps;C:\Microsoft VS Code\bin;C:\Users\tahgancrazy\AppData\Local\GitHubDesktop\bin
+USERNAME=tahgancrazy
+LANG=en_US.UTF-8
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+TMP=C:\Users\TAHGAN~1\AppData\Local\Temp
+TEMP=C:\Users\TAHGAN~1\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.5438)
+OS uptime: 0 days 1:27 hours
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7 microcode 0x2f, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, ht, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 8135M (470M free)
+TotalPageFile size 10151M (AvailPageFile size 8M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 51M, peak: 179M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.26+4) for windows-amd64 JRE (11.0.26+4), built on Jan 22 2025 03:32:54 by "" with MS VC++ 17.7 (VS2022)
+
+END.
